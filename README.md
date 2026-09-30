@@ -1,0 +1,1 @@
+Build a Live Darshan platform where devotees can select a permitted temple and request a one-to-one live video darshan. Verified users who are physically present at that temple can accept the request and provide live darshan through a video call.
