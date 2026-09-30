@@ -1,0 +1,6 @@
+{
+  "name": "Darshan Live",
+  "description": "Live 1-to-1 video darshan connecting devotees with verified temple sevaks on-site within 200m geofence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

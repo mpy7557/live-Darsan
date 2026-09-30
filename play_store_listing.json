@@ -1,0 +1,54 @@
+{
+  "listing": {
+    "title": "Darshan Live",
+    "title_length": 12,
+    "short_description": "One-to-one live video darshan connecting devotees with verified temple sevaks.",
+    "short_description_length": 78,
+    "full_description": "Darshan Live connects devotees worldwide with authorized on-site temple sevaks for personalized one-to-one live video darshan.\n\nKey Features:\n• Permitted Temple Directory: Discover authorized shrines including Kashi Vishwanath, Tirupati Balaji, Siddhivinayak, Somnath, Mahakaleshwar, and Meenakshi Amman with sanctum timings, deity details, and permitted darshan focus areas.\n• Online Verified Sevaks: View sevaks currently on duty at each temple. Read verified sevak profiles including seva experience, languages spoken, and devotee ratings prior to requesting darshan.\n• 200m GPS Geofence Verification: Broadcasters must be physically present within 200 meters of the sacred sanctum coordinates to activate live streaming, ensuring authentic on-site darshan.\n• Temple-Issued Sevak Authorization: Volunteers verify their identity with official temple authorization codes to receive certified provider credentials.\n• Personalized 1-to-1 Darshan Requests: Submit your family Sankalpa prayer, Gotra names, and specific darshan focus (Garbhagriha, Aarti view, or Parikrama corridor) directly to available sevaks.\n• Live Video Darshan Screen: Experience high-definition video darshan with camera controls, picture-in-picture devotee view, ambient sanctum soundscape, and sacred screenshot blessing captures.\n• Voluntary Dakshina & Offerings: Contribute digital offerings and flower seva via integrated Razorpay payment gateway with instant 80G tax exemption receipts.\n• Local History & Records: Review completed temple darshans, seva history, and digital donation certificates stored securely on your device.\n\nPermissions Used:\n• Location: Used to confirm physical presence within the temple's 200m sacred boundary.\n• Camera & Microphone: Required for 1-to-1 two-way video and audio darshan communication.",
+    "full_description_length": 1827
+  },
+  "capability_inventory": [
+    {
+      "capability": "Phone OTP authentication & profile creation",
+      "evidence": "app/src/main/java/com/example/ui/screens/AuthScreen.kt (AuthScreen)"
+    },
+    {
+      "capability": "Permitted temple discovery and sanctum timings",
+      "evidence": "app/src/main/java/com/example/ui/screens/TempleDiscoveryScreen.kt (TempleDiscoveryScreen)"
+    },
+    {
+      "capability": "Sevak profile viewing (photo, bio, rating, languages)",
+      "evidence": "app/src/main/java/com/example/ui/components/SevakProfileSheet.kt (SevakProfileSheet)"
+    },
+    {
+      "capability": "Temple-issued code verification for Sevak role",
+      "evidence": "app/src/main/java/com/example/ui/screens/SevakDashboardScreen.kt (SevakDashboardScreen)"
+    },
+    {
+      "capability": "200m GPS geofence distance calculation and boundary locking",
+      "evidence": "app/src/main/java/com/example/service/GeofenceManager.kt (GeofenceManager)"
+    },
+    {
+      "capability": "1-to-1 video darshan request, accept, and active call interface",
+      "evidence": "app/src/main/java/com/example/ui/screens/LiveDarshanCallScreen.kt (LiveDarshanCallScreen)"
+    },
+    {
+      "capability": "Razorpay offering checkout with 80G tax receipt records",
+      "evidence": "app/src/main/java/com/example/service/RazorpayService.kt (RazorpayService)"
+    },
+    {
+      "capability": "Local persistence of temples, sevaks, requests, and offerings via Room",
+      "evidence": "app/src/main/java/com/example/data/local/DarshanDatabase.kt (DarshanDatabase)"
+    }
+  ],
+  "disclosures_applied": [
+    {
+      "category": "Location and Camera Permissions",
+      "disclosure_text": "Discloses that Location is used for 200m sanctum geofencing and Camera/Microphone are used for live video darshan."
+    }
+  ],
+  "omitted_for_lack_of_evidence": [
+    "Public group multi-user live streaming broadcasts (app implements 1-to-1 private darshan only)",
+    "Courier delivery of physical prasad (not implemented in code)"
+  ]
+}
